@@ -1,0 +1,5 @@
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/obj/Debug/MJRefresh_Xamarin.csproj.CoreCompileInputs.cache
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/bin/Debug/MJRefresh_Xamarin.dll
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/bin/Debug/MJRefresh_Xamarin.pdb
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/obj/Debug/MJRefresh_Xamarin.dll
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/obj/Debug/MJRefresh_Xamarin.pdb

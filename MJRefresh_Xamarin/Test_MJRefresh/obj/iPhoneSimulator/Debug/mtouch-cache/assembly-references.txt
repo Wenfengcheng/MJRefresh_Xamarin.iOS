@@ -1,0 +1,8 @@
+/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/mscorlib.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/../../64bits/Xamarin.iOS.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/System.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/Mono.Security.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/System.Xml.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.14.0.24/lib/mono/Xamarin.iOS/System.Core.dll
+/Users/highview/Projects/MJRefresh_Xamarin/MJRefresh_Xamarin/bin/Debug/MJRefresh_Xamarin.dll
