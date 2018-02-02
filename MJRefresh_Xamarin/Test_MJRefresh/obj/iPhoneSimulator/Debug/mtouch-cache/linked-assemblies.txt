@@ -1,8 +1,0 @@
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Test_MJRefresh.exe
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/mscorlib.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Xamarin.iOS.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/Mono.Security.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Xml.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/System.Core.dll
-/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/bin/iPhoneSimulator/Debug/Test_MJRefresh.app:/Users/highview/Projects/MJRefresh_Xamarin/Test_MJRefresh/obj/iPhoneSimulator/Debug/mtouch-cache/Link/MJRefresh_Xamarin.dll

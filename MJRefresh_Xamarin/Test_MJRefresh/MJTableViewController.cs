@@ -3,55 +3,43 @@ using System.Threading.Tasks;
 using Foundation;
 using MJRefresh;
 using UIKit;
+using Test_MJRefresh.DIY;
 
 namespace Test_MJRefresh
 {
-    public partial class ViewController : UIViewController
+    public class MJTableViewController : UITableViewController
     {
-        public UITableView table;
         public int Count { get; set; }
 
-        public ViewController()
+        public MJTableViewController()
         {
-            
-        }
-
-        protected ViewController(IntPtr handle) : base(handle)
-        {
-            // Note: this .ctor should not contain any initialization logic.
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            this.View.BackgroundColor = UIColor.White;
+            this.TableView.Frame = new CoreGraphics.CGRect(0, 40, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 64 - 40);
 
-            table = new UITableView();
-            table.Frame = new CoreGraphics.CGRect(0, 40, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 64 - 40);
-            table.DataSource = new TableDataSource(this);
-            table.Delegate = new TableDelegate(this);
-            this.View.AddSubview(table);
-
-            MJRefreshNormalHeader header = new MJRefreshNormalHeader();
-            table.SetHeader(header);
+            MJChiBaoZiHeader header = new MJChiBaoZiHeader();
+            this.TableView.SetHeader(header);
 
             MJRefreshAutoNormalFooter footer = new MJRefreshAutoNormalFooter();
-            table.SetFooter(footer);
+            this.TableView.SetFooter(footer);
 
             header.RefreshingBlock = async () => {
                 await Task.Delay(2000);
                 InvokeOnMainThread(() => {
                     footer.Hidden = true;
                     this.Count += 12;
-                    table.ReloadData();
-                    table.Header().EndRefreshing();
+                    this.TableView.ReloadData();
+                    this.TableView.Header().EndRefreshing();
                     footer.Hidden = false;
 
                 });
             };
 
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderIdleText"), MJRefreshState.Idle);
+            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle),"MJRefreshHeaderIdleText"), MJRefreshState.Idle);
             header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderPullingText"), MJRefreshState.Pulling);
             header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderRefreshingText"), MJRefreshState.Refreshing);
 
@@ -63,8 +51,8 @@ namespace Test_MJRefresh
                 InvokeOnMainThread(() => {
                     footer.Hidden = true;
                     this.Count += 5;
-                    table.ReloadData();
-                    table.Footer().EndRefreshing();
+                    this.TableView.ReloadData();
+                    this.TableView.Footer().EndRefreshing();
                     footer.Hidden = false;
                 });
             };
@@ -75,43 +63,15 @@ namespace Test_MJRefresh
 
 
 
-            table.Header().BeginRefreshing();
-            // Perform any additional setup after loading the view, typically from a nib.
+            this.TableView.Header().BeginRefreshing();
         }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-        }
-    }
-
-    public class TableDelegate : UITableViewDelegate
-    {
-        private ViewController _vc;
-        public TableDelegate(ViewController vc)
-        {
-            _vc = vc;
-        }
-        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
-        {
-            _vc.NavigationController.PushViewController(new MJTableViewController(), true);
-        }
-    }
-
-    public class TableDataSource : UITableViewDataSource
-    {
-        private ViewController _vc;
-        public TableDataSource(ViewController vc)
-        {
-            _vc = vc;
-        }
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell = tableView.DequeueReusableCell("testcell");
             if (cell == null)
                 cell = new UITableViewCell(UITableViewCellStyle.Default, "testcell");
-            if(indexPath.Row % 2 != 0)
+            if (indexPath.Row % 2 != 0)
                 cell.TextLabel.Text = "push";
             else
                 cell.TextLabel.Text = "modal";
@@ -120,9 +80,7 @@ namespace Test_MJRefresh
 
         public override nint RowsInSection(UITableView tableView, nint section)
         {
-            return _vc.Count;
+            return this.Count;
         }
-
-
     }
 }

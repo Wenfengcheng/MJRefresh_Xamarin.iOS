@@ -1,11 +1,16 @@
 ﻿using System;
 using ObjCRuntime;
 
-public enum MJRefreshState : int
-{
-    Idle = 1,
-    Pulling,
-    Refreshing,
-    WillRefresh,
-    NoMoreData
+namespace MJRefresh{
+    
+    public enum MJRefreshState : long
+    {
+        Idle = 1,
+        Pulling,
+        Refreshing,
+        WillRefresh,
+        NoMoreData
+    }
+
 }
+

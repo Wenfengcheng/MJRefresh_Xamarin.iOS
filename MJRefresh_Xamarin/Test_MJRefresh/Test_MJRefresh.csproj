@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="DIY\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -103,12 +104,23 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MJTableViewController.cs" />
+    <Compile Include="DIY\MJChiBaoZiHeader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh_Xamarin\MJRefresh_Xamarin.csproj">
       <Project>{6069B390-97E3-481F-B316-88672D6D3AEF}</Project>
       <Name>MJRefresh_Xamarin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="MJRefresh.bundle\arrow%402x.png" />
+    <BundleResource Include="MJRefresh.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="MJRefresh.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="MJRefresh.bundle\zh-Hant.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\dropdown_loading_01%402x.png" />
+    <BundleResource Include="Resources\dropdown_loading_02%402x.png" />
+    <BundleResource Include="Resources\dropdown_loading_03%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

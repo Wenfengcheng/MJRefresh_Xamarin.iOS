@@ -1,18 +1,12 @@
 ﻿<Properties StartupConfiguration="{828B1C88-D192-4983-A98D-1D5F186D47E2}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Test_MJRefresh/ViewController.cs">
     <Files>
-      <File FileName="MJRefresh_Xamarin/Structs.cs" Line="3" Column="1" />
-      <File FileName="MJRefresh_Xamarin/obj/Debug/ios/SupportDelegates.g.cs" Line="44" Column="69" />
-      <File FileName="Test_MJRefresh/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Test_MJRefresh/ViewController.cs" Line="28" Column="47" />
+      <File FileName="MJRefresh_Xamarin/ApiDefinition.cs" Line="589" Column="31" />
+      <File FileName="Test_MJRefresh/MJTableViewController.cs" Line="22" Column="1" />
+      <File FileName="Test_MJRefresh/DIY/MJChiBaoZiHeader.cs" Line="26" Column="28" />
+      <File FileName="Test_MJRefresh/ViewController.cs" Line="16" Column="13" />
+      <File FileName="Test_MJRefresh/AppDelegate.cs" Line="24" Column="86" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MJRefresh_Xamarin" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -20,7 +14,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Test__MJRefresh PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4927E8B0-D947-44E0-8517-060D17511DC2">
+  <MonoDevelop.Ide.ItemProperties.Test__MJRefresh PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9F3C2FCB-9F2B-470E-837C-5AA9756625F3">
     <MonoDevelop.MacDev.AppleDevelopmentTeam />
   </MonoDevelop.Ide.ItemProperties.Test__MJRefresh>
 </Properties>
