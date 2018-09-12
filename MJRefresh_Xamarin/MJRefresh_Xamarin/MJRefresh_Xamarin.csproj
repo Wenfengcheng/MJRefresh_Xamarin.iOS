@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,6 +10,17 @@
     <RootNamespace>MJRefresh_Xamarin</RootNamespace>
     <AssemblyName>MJRefresh_Xamarin</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <PackOnBuild>true</PackOnBuild>
+    <Owners>Wenfeng Cheng</Owners>
+    <PackageProjectUrl>https://github.com/Wenfengcheng/MJRefresh_Xamarin.iOS</PackageProjectUrl>
+    <PackageReleaseNotes>Xamarin.iOS.MJRefresh</PackageReleaseNotes>
+    <Summary>Xamarin.iOS.MJRefresh</Summary>
+    <PackageTags>MJRefresh Xamarin.iOS</PackageTags>
+    <Title>Xamarin.iOS.MJRefresh</Title>
+    <PackageId>Xamarin.iOS.MJRefresh</PackageId>
+    <PackageVersion>1.0</PackageVersion>
+    <Authors>Wenfeng Cheng</Authors>
+    <Description>Xamarin.iOS.MJRefresh</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,5 +58,9 @@
       <SmartLink>False</SmartLink>
     </NativeReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
 </Project>
