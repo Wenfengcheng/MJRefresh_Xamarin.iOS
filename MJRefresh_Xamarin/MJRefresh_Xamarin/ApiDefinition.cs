@@ -166,7 +166,6 @@ namespace MJRefresh
     interface NSBundle_MJRefresh
     {
         // +(instancetype)mj_refreshBundle;
-        [Static]
         [Export("mj_refreshBundle")]
         NSBundle Mj_refreshBundle();
 
@@ -176,12 +175,10 @@ namespace MJRefresh
         UIImage Mj_arrowImage { get; }
 
         // +(NSString *)mj_localizedStringForKey:(NSString *)key value:(NSString *)value;
-        [Static]
         [Export("mj_localizedStringForKey:value:")]
         string Mj_localizedStringForKey(string key, string value);
 
         // +(NSString *)mj_localizedStringForKey:(NSString *)key;
-        [Static]
         [Export("mj_localizedStringForKey:")]
         string Mj_localizedStringForKey(string key);
     }
@@ -305,7 +302,6 @@ namespace MJRefresh
     interface UILabel_MJRefresh
     {
         // +(instancetype)mj_label;
-        [Static]
         [Export("mj_label")]
         UILabel Mj_label();
 

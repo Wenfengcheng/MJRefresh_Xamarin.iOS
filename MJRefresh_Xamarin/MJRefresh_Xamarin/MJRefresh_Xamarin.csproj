@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.props')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -13,14 +13,15 @@
     <PackOnBuild>true</PackOnBuild>
     <Owners>Wenfeng Cheng</Owners>
     <PackageProjectUrl>https://github.com/Wenfengcheng/MJRefresh_Xamarin.iOS</PackageProjectUrl>
-    <PackageReleaseNotes>Xamarin.iOS.MJRefresh</PackageReleaseNotes>
+    <PackageReleaseNotes>Xamarin.iOS.MJRefresh 3.1.15.7</PackageReleaseNotes>
     <Summary>Xamarin.iOS.MJRefresh</Summary>
     <PackageTags>MJRefresh Xamarin.iOS</PackageTags>
     <Title>Xamarin.iOS.MJRefresh</Title>
     <PackageId>Xamarin.iOS.MJRefresh</PackageId>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>3.1.15.7</PackageVersion>
     <Authors>Wenfeng Cheng</Authors>
     <Description>Xamarin.iOS.MJRefresh</Description>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,5 +63,5 @@
     <BundleResource Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
-  <Import Project="..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.0\build\NuGet.Build.Packaging.targets')" />
+  <Import Project="..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets" Condition="Exists('..\packages\NuGet.Build.Packaging.0.2.2\build\NuGet.Build.Packaging.targets')" />
 </Project>
