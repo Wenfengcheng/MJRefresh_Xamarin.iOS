@@ -28,16 +28,17 @@ namespace Test_MJRefresh
             this.View.BackgroundColor = UIColor.White;
 
             table = new UITableView();
-            table.Frame = new CoreGraphics.CGRect(0, 40, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 64 - 40);
+            table.TableFooterView = new UIView();
+            table.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height);
             table.DataSource = new TableDataSource(this);
             table.Delegate = new TableDelegate(this);
             this.View.AddSubview(table);
 
             MJRefreshNormalHeader header = new MJRefreshNormalHeader();
-            table.SetHeader(header);
+            table.SetMj_header(header);
 
             MJRefreshAutoNormalFooter footer = new MJRefreshAutoNormalFooter();
-            table.SetFooter(footer);
+            table.SetMj_footer(footer);
 
             header.RefreshingBlock = async () => {
                 await Task.Delay(2000);
@@ -45,18 +46,13 @@ namespace Test_MJRefresh
                     footer.Hidden = true;
                     this.Count += 12;
                     table.ReloadData();
-                    table.Header().EndRefreshing();
+                    table.Mj_header().EndRefreshing();
                     footer.Hidden = false;
 
                 });
             };
 
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderIdleText"), MJRefreshState.Idle);
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderPullingText"), MJRefreshState.Pulling);
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderRefreshingText"), MJRefreshState.Refreshing);
-
             header.AutomaticallyChangeAlpha = true;
-
 
             footer.RefreshingBlock = async () => {
                 await Task.Delay(2000);
@@ -64,31 +60,19 @@ namespace Test_MJRefresh
                     footer.Hidden = true;
                     this.Count += 5;
                     table.ReloadData();
-                    table.Footer().EndRefreshing();
+                    table.Mj_footer().EndRefreshing();
                     footer.Hidden = false;
                 });
             };
 
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterIdleText"), MJRefreshState.Idle);
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterRefreshingText"), MJRefreshState.Refreshing);
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterNoMoreDataText"), MJRefreshState.NoMoreData);
-
-
-
-            table.Header().BeginRefreshing();
-            // Perform any additional setup after loading the view, typically from a nib.
+            table.Mj_header().BeginRefreshing();
         }
 
-        public override void DidReceiveMemoryWarning()
-        {
-            base.DidReceiveMemoryWarning();
-            // Release any cached data, images, etc that aren't in use.
-        }
     }
 
     public class TableDelegate : UITableViewDelegate
     {
-        private ViewController _vc;
+        [Weak] ViewController _vc;
         public TableDelegate(ViewController vc)
         {
             _vc = vc;
@@ -101,7 +85,7 @@ namespace Test_MJRefresh
 
     public class TableDataSource : UITableViewDataSource
     {
-        private ViewController _vc;
+        [Weak] ViewController _vc;
         public TableDataSource(ViewController vc)
         {
             _vc = vc;

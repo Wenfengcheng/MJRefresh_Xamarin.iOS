@@ -13,12 +13,12 @@ namespace Test_MJRefresh.DIY
         {
             base.Prepare();
 
-            NSMutableArray refreshImages = new NSMutableArray();
+            UIImage[] refreshImages = new UIImage[3];
 
-            for (int i = 1; i < 3;i++)
+            for (int i = 0; i < 3;i++)
             {
-                UIImage image = new UIImage($"dropdown_loading_0{i}");
-                refreshImages.Add(image);
+                UIImage image = new UIImage($"dropdown_loading_0{i+1}");
+                refreshImages[i] = image;
             }
 
             this.SetImages(refreshImages, MJRefreshState.Pulling);

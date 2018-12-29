@@ -11,40 +11,31 @@ namespace Test_MJRefresh
     {
         public int Count { get; set; }
 
-        public MJTableViewController()
-        {
-        }
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            this.TableView.Frame = new CoreGraphics.CGRect(0, 40, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height - 64 - 40);
-
+            TableView.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height);
+            TableView.TableFooterView = new UIView();
             MJChiBaoZiHeader header = new MJChiBaoZiHeader();
-            this.TableView.SetHeader(header);
+            TableView.SetMj_header(header);
 
             MJRefreshAutoNormalFooter footer = new MJRefreshAutoNormalFooter();
-            this.TableView.SetFooter(footer);
+            TableView.SetMj_footer(footer);
 
             header.RefreshingBlock = async () => {
                 await Task.Delay(2000);
                 InvokeOnMainThread(() => {
                     footer.Hidden = true;
-                    this.Count += 12;
-                    this.TableView.ReloadData();
-                    this.TableView.Header().EndRefreshing();
+                    Count += 12;
+                    TableView.ReloadData();
+                    TableView.Mj_header().EndRefreshing();
                     footer.Hidden = false;
 
                 });
             };
 
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle),"MJRefreshHeaderIdleText"), MJRefreshState.Idle);
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderPullingText"), MJRefreshState.Pulling);
-            header.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshHeaderRefreshingText"), MJRefreshState.Refreshing);
-
             header.AutomaticallyChangeAlpha = true;
-
 
             footer.RefreshingBlock = async () => {
                 await Task.Delay(2000);
@@ -52,18 +43,12 @@ namespace Test_MJRefresh
                     footer.Hidden = true;
                     this.Count += 5;
                     this.TableView.ReloadData();
-                    this.TableView.Footer().EndRefreshing();
+                    this.TableView.Mj_footer().EndRefreshing();
                     footer.Hidden = false;
                 });
             };
 
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterIdleText"), MJRefreshState.Idle);
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterRefreshingText"), MJRefreshState.Refreshing);
-            footer.SetTitle(NSBundle_MJRefresh.Mj_localizedStringForKey(NSBundle_MJRefresh.Mj_refreshBundle(NSBundle.MainBundle), "MJRefreshAutoFooterNoMoreDataText"), MJRefreshState.NoMoreData);
-
-
-
-            this.TableView.Header().BeginRefreshing();
+            this.TableView.Mj_header().BeginRefreshing();
         }
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
