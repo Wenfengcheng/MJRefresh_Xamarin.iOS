@@ -13,12 +13,12 @@
     <PackOnBuild>true</PackOnBuild>
     <Owners>Wenfeng Cheng</Owners>
     <PackageProjectUrl>https://github.com/Wenfengcheng/MJRefresh_Xamarin.iOS</PackageProjectUrl>
-    <PackageReleaseNotes>Xamarin.iOS.MJRefresh 3.1.15.7-1</PackageReleaseNotes>
+    <PackageReleaseNotes>Xamarin.iOS.MJRefresh 3.1.15.7</PackageReleaseNotes>
     <Summary>Xamarin.iOS.MJRefresh</Summary>
     <PackageTags>MJRefresh Xamarin.iOS</PackageTags>
     <Title>Xamarin.iOS.MJRefresh</Title>
     <PackageId>Xamarin.iOS.MJRefresh</PackageId>
-    <PackageVersion>3.1.15.7-1</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Wenfeng Cheng</Authors>
     <Description>Xamarin.iOS.MJRefresh</Description>
     <NeutralLanguage>en</NeutralLanguage>
