@@ -1,10 +1,15 @@
 # MJRefresh_Xamarin.iOS
 
+[![Version Status](https://img.shields.io/cocoapods/v/MJRefresh.svg?style=flat)](http://cocoadocs.org/docsets/MJRefresh)
+
 An easy way to use pull-to-refresh
 
 Port of Xamarin iOS of the [MJRefresh](https://github.com/CoderMJLee/MJRefresh)
 
 Binding process and usage steps please refer to [Xamarin.iOS MJRefresh Embedded](https://www.jianshu.com/p/9c9642122afb)
+
+## NuGet
+* [MJRefresh_Xamarin.iOS](https://www.nuget.org/packages/Xamarin.iOS.MJRefresh) [![NuGet](https://img.shields.io/nuget/v/Xamarin.iOS.MJRefresh.svg?label=NuGet)](https://www.nuget.org/packages/Xamarin.iOS.MJRefresh)
 
 ## Default Style
 
