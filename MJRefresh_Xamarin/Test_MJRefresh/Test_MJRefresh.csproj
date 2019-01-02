@@ -88,6 +88,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="DIY\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -106,6 +107,8 @@
     </Compile>
     <Compile Include="MJTableViewController.cs" />
     <Compile Include="DIY\MJChiBaoZiHeader.cs" />
+    <Compile Include="DIY\BossRefreshHeader.cs" />
+    <Compile Include="Helper\UIView_MJExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MJRefresh_Xamarin\MJRefresh_Xamarin.csproj">
@@ -121,6 +124,90 @@
     <BundleResource Include="Resources\dropdown_loading_01%402x.png" />
     <BundleResource Include="Resources\dropdown_loading_02%402x.png" />
     <BundleResource Include="Resources\dropdown_loading_03%402x.png" />
+    <BundleResource Include="Resources\60p.png" />
+    <BundleResource Include="Resources\59p.png" />
+    <BundleResource Include="Resources\58p.png" />
+    <BundleResource Include="Resources\57p.png" />
+    <BundleResource Include="Resources\56p.png" />
+    <BundleResource Include="Resources\55p.png" />
+    <BundleResource Include="Resources\54p.png" />
+    <BundleResource Include="Resources\53p.png" />
+    <BundleResource Include="Resources\52p.png" />
+    <BundleResource Include="Resources\51p.png" />
+    <BundleResource Include="Resources\50p.png" />
+    <BundleResource Include="Resources\49p.png" />
+    <BundleResource Include="Resources\48p.png" />
+    <BundleResource Include="Resources\47p.png" />
+    <BundleResource Include="Resources\46p.png" />
+    <BundleResource Include="Resources\45p.png" />
+    <BundleResource Include="Resources\44p.png" />
+    <BundleResource Include="Resources\43p.png" />
+    <BundleResource Include="Resources\42p.png" />
+    <BundleResource Include="Resources\41p.png" />
+    <BundleResource Include="Resources\40p.png" />
+    <BundleResource Include="Resources\39p.png" />
+    <BundleResource Include="Resources\38p.png" />
+    <BundleResource Include="Resources\37p.png" />
+    <BundleResource Include="Resources\36p.png" />
+    <BundleResource Include="Resources\35p.png" />
+    <BundleResource Include="Resources\34p.png" />
+    <BundleResource Include="Resources\33p.png" />
+    <BundleResource Include="Resources\32p.png" />
+    <BundleResource Include="Resources\31p.png" />
+    <BundleResource Include="Resources\30p.png" />
+    <BundleResource Include="Resources\29p.png" />
+    <BundleResource Include="Resources\28p.png" />
+    <BundleResource Include="Resources\27p.png" />
+    <BundleResource Include="Resources\26p.png" />
+    <BundleResource Include="Resources\25p.png" />
+    <BundleResource Include="Resources\24r.png" />
+    <BundleResource Include="Resources\24p.png" />
+    <BundleResource Include="Resources\23r.png" />
+    <BundleResource Include="Resources\23p.png" />
+    <BundleResource Include="Resources\22r.png" />
+    <BundleResource Include="Resources\22p.png" />
+    <BundleResource Include="Resources\21r.png" />
+    <BundleResource Include="Resources\21p.png" />
+    <BundleResource Include="Resources\20r.png" />
+    <BundleResource Include="Resources\20p.png" />
+    <BundleResource Include="Resources\19r.png" />
+    <BundleResource Include="Resources\19p.png" />
+    <BundleResource Include="Resources\18r.png" />
+    <BundleResource Include="Resources\18p.png" />
+    <BundleResource Include="Resources\17r.png" />
+    <BundleResource Include="Resources\17p.png" />
+    <BundleResource Include="Resources\16r.png" />
+    <BundleResource Include="Resources\16p.png" />
+    <BundleResource Include="Resources\15r.png" />
+    <BundleResource Include="Resources\15p.png" />
+    <BundleResource Include="Resources\14r.png" />
+    <BundleResource Include="Resources\14p.png" />
+    <BundleResource Include="Resources\13r.png" />
+    <BundleResource Include="Resources\13p.png" />
+    <BundleResource Include="Resources\12r.png" />
+    <BundleResource Include="Resources\12p.png" />
+    <BundleResource Include="Resources\11r.png" />
+    <BundleResource Include="Resources\11p.png" />
+    <BundleResource Include="Resources\10r.png" />
+    <BundleResource Include="Resources\10p.png" />
+    <BundleResource Include="Resources\9r.png" />
+    <BundleResource Include="Resources\9p.png" />
+    <BundleResource Include="Resources\8r.png" />
+    <BundleResource Include="Resources\8p.png" />
+    <BundleResource Include="Resources\7r.png" />
+    <BundleResource Include="Resources\7p.png" />
+    <BundleResource Include="Resources\6r.png" />
+    <BundleResource Include="Resources\6p.png" />
+    <BundleResource Include="Resources\5r.png" />
+    <BundleResource Include="Resources\5p.png" />
+    <BundleResource Include="Resources\4r.png" />
+    <BundleResource Include="Resources\4p.png" />
+    <BundleResource Include="Resources\3r.png" />
+    <BundleResource Include="Resources\3p.png" />
+    <BundleResource Include="Resources\2r.png" />
+    <BundleResource Include="Resources\2p.png" />
+    <BundleResource Include="Resources\1r.png" />
+    <BundleResource Include="Resources\1p.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

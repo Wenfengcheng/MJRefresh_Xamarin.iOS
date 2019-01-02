@@ -15,9 +15,8 @@ namespace Test_MJRefresh
         {
             base.ViewDidLoad();
 
-            TableView.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height);
             TableView.TableFooterView = new UIView();
-            MJChiBaoZiHeader header = new MJChiBaoZiHeader();
+            BossRefreshHeader header = new BossRefreshHeader();
             TableView.SetMj_header(header);
 
             MJRefreshAutoNormalFooter footer = new MJRefreshAutoNormalFooter();
@@ -56,11 +55,13 @@ namespace Test_MJRefresh
             UITableViewCell cell = tableView.DequeueReusableCell("testcell");
             if (cell == null)
                 cell = new UITableViewCell(UITableViewCellStyle.Default, "testcell");
-            if (indexPath.Row % 2 != 0)
-                cell.TextLabel.Text = "push";
-            else
-                cell.TextLabel.Text = "modal";
+            cell.TextLabel.Text = $"测试数据{indexPath.Row}";
             return cell;
+        }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return 44;
         }
 
         public override nint RowsInSection(UITableView tableView, nint section)

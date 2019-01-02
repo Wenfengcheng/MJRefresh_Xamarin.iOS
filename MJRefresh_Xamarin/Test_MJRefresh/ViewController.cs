@@ -27,11 +27,13 @@ namespace Test_MJRefresh
 
             this.View.BackgroundColor = UIColor.White;
 
-            table = new UITableView();
-            table.TableFooterView = new UIView();
-            table.Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height);
-            table.DataSource = new TableDataSource(this);
-            table.Delegate = new TableDelegate(this);
+            table = new UITableView
+            {
+                TableFooterView = new UIView(),
+                Frame = new CoreGraphics.CGRect(0, 0, UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height),
+                DataSource = new TableDataSource(this),
+                Delegate = new TableDelegate(this)
+            };
             this.View.AddSubview(table);
 
             MJRefreshNormalHeader header = new MJRefreshNormalHeader();
@@ -95,10 +97,7 @@ namespace Test_MJRefresh
             UITableViewCell cell = tableView.DequeueReusableCell("testcell");
             if (cell == null)
                 cell = new UITableViewCell(UITableViewCellStyle.Default, "testcell");
-            if(indexPath.Row % 2 != 0)
-                cell.TextLabel.Text = "push";
-            else
-                cell.TextLabel.Text = "modal";
+            cell.TextLabel.Text = $"测试数据{indexPath.Row}";
             return cell;
         }
 
@@ -106,7 +105,6 @@ namespace Test_MJRefresh
         {
             return _vc.Count;
         }
-
 
     }
 }
