@@ -152,12 +152,12 @@ namespace MJRefresh
         nint Mj_totalDataCount();
 
         // @property (copy, nonatomic) void (^mj_reloadDataBlock)(NSInteger);
-        [Export("mj_reloadDataBlock", ArgumentSemantic.Copy)]
-        Action<nint> Mj_reloadDataBlock();
+        //[Export("mj_reloadDataBlock", ArgumentSemantic.Copy)]
+        //Action<nint> Mj_reloadDataBlock();
 
         // @property (copy, nonatomic) void (^mj_reloadDataBlock)(NSInteger);
-        [Export("setMj_reloadDataBlock:", ArgumentSemantic.Copy)]
-        void Mj_reloadDataBlock(Action<nint> block);
+        //[Export("setMj_reloadDataBlock:", ArgumentSemantic.Copy)]
+        //void Mj_reloadDataBlock(Action<nint> block);
     }
 
     // @interface MJRefresh (NSBundle)
@@ -634,4 +634,19 @@ namespace MJRefresh
         void SetImages(UIImage[] images, MJRefreshState state);
     }
     #endregion
+
+    // @interface MJRefreshConfig : NSObject
+    [BaseType(typeof(NSObject))]
+    [DisableDefaultCtor]
+    interface MJRefreshConfig
+    {
+        // @property (copy, nonatomic) NSString * _Nullable languageCode;
+        [NullAllowed, Export("languageCode")]
+        string LanguageCode { get; set; }
+
+        // +(instancetype _Nonnull)defaultConfig;
+        [Static]
+        [Export("defaultConfig")]
+        MJRefreshConfig DefaultConfig();
+    }
 }
